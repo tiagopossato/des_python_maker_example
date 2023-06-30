@@ -4,6 +4,8 @@ This repository contains an example of how to use the DESPythonMaker to convert 
 
 1. The file ```setup.py``` install the DESPythonMaker as submodule and configure a virtual environment in the folder ```application\env```.
 
+    * You can access DESPythonMaker in the main repository [here](https://github.com/tiagopossato/des_python_maker) 
+
 2. The file ```convert.py``` convert the Supremica file ```application_supremica_supervisor.wmod``` into a Python project in the folder ```application\supervisor```.
 
 3. See ```application\main.py``` for an example of how to use the generated supervisor.
@@ -12,4 +14,4 @@ This repository contains an example of how to use the DESPythonMaker to convert 
 
     * To do this, you have to change the import in ```application\main.py``` from ```from handle_event import handle_event``` to ```from supervisor import handle_event```.
 
-5. For first use, you have to run ```setup.py``` to install the DESPythonMaker and create the virtual environment and run ```convert.py``` to convert the Supremica file into a Python project.
+5. **For first use, you have to run ```setup.py``` to install the DESPythonMaker and create the virtual environment and run ```convert.py``` to convert the Supremica file into a Python project.**
