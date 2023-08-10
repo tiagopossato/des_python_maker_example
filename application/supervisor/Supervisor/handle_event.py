@@ -1,10 +1,10 @@
 """
 Verifies that the event is enabled, runs the event and its action
 """
-from supervisor import Event, Events
-from supervisor.Supervisor import EventKind
-from supervisor import supervisors_list
-from supervisor import log_error, log_state
+from . import Event, Events
+from . import EventKind
+from . import supervisors_list
+from . import log_error, log_state
 from threading import Lock
 
 # create a lock
