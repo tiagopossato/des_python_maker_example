@@ -3,7 +3,11 @@ Arquivo para conexão com o driver modbus
 """
 import configparser
 import os
-from pymodbus.client import ModbusTcpClient
+try:
+    from pymodbus.client import ModbusTcpClient
+except ModuleNotFoundError:
+    print("\n\n\nError importing pymodbus. Please install it with 'pip install pymodbus'\n\n\n")
+    exit(-1)
 from threading import Lock
 
 # Lê as configurações do arquivo config.ini

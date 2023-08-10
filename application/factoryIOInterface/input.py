@@ -1,4 +1,9 @@
-from pymodbus.exceptions import ModbusIOException
+try:
+    from pymodbus.exceptions import ModbusIOException
+except ModuleNotFoundError:
+    print("\n\n\nError importing pymodbus. Please install it with 'pip install pymodbus'\n\n\n")
+    exit(-1)
+    
 from .connection import client, modbus_lock, slave
 
 class Input:
