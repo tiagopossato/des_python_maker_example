@@ -58,3 +58,4 @@ def trigger_event(event: Event):
         # print(f"Automatic running event: {event.get_name()}")
         if trigger_event(event):
             break
+
