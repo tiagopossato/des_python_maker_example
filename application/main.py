@@ -6,47 +6,47 @@ from factoryIOInterface import *
 #-------- CAMADA FÍSICA ENTRADAS ----------------
 def s1_action(value):
     if(value == True):
-        trigger_event(Events['s1'])
+        trigger_event(Events['t1'])
 
 s1_input.set_callback(s1_action)
 
 def s2_action(value):
     if(value == True):
-        trigger_event(Events['s2'])
+        trigger_event(Events['t2'])
 
 s2_input.set_callback(s2_action)
 
 def ppx_moving_action(value):
     if(value == True):
-        trigger_event(Events['ppx_moving'])
+        trigger_event(Events['m7'])
     else:
-        trigger_event(Events['ppx_stoped'])
+        trigger_event(Events['p7'])
 
 ppx_moving_input.set_callback(ppx_moving_action)
 
 def ppz_moving_action(value):
     if(value == True):
-        trigger_event(Events['ppz_moving'])
+        trigger_event(Events['m6'])
     else:
-        trigger_event(Events['ppz_stoped'])
+        trigger_event(Events['p6'])
 
 ppz_moving_input.set_callback(ppz_moving_action)
 
 def ppg_item_action(value):
     if(value == True):
-        trigger_event(Events['ppg_item'])
+        trigger_event(Events['t5'])
 
 ppg_item_input.set_callback(ppg_item_action)
 
 def start_action(value):
     if(value == True):
-        trigger_event(Events['start'])
+        trigger_event(Events['t3'])
 
 start_input.set_callback(start_action)
 
 def stop_action(value):
     if(value == False):
-        trigger_event(Events['stop'])
+        trigger_event(Events['t4'])
 
 stop_input.set_callback(stop_action)
 
@@ -87,19 +87,19 @@ def ppz_on_action(event):
 def ppz_off_action(event):
     ppz.off()
 
-Events['cv1_on'].set_action(cv1_on_action)
-Events['cv1_off'].set_action(cv1_off_action)
-Events['cv2_on'].set_action(cv2_on_action)
-Events['cv2_off'].set_action(cv2_off_action)
-Events['ppx_on'].set_action(ppx_on_action)
-Events['ppx_off'].set_action(ppx_off_action)
-Events['ppg_on'].set_action(ppg_on_action)
-Events['ppg_off'].set_action(ppg_off_action)
-Events['ppz_on'].set_action(ppz_on_action)
-Events['ppz_off'].set_action(ppz_off_action)
+Events['s1'].set_action(cv1_on_action)
+Events['f1'].set_action(cv1_off_action)
+Events['s2'].set_action(cv2_on_action)
+Events['f2'].set_action(cv2_off_action)
+Events['s4'].set_action(ppx_on_action)
+Events['f4'].set_action(ppx_off_action)
+Events['s5'].set_action(ppg_on_action)
+Events['f5'].set_action(ppg_off_action)
+Events['s3'].set_action(ppz_on_action)
+Events['f3'].set_action(ppz_off_action)
 
 if __name__ == '__main__':
-    sleep(3)
+    sleep(2)
     while True:
         try:
             read_all_input_values()
